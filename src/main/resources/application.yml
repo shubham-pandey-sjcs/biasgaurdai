@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: biasGuardAi
+  datasource:
+    url: jdbc:postgresql://localhost:9001/biasguardDB
+    username: biasguard
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+          model: phi3:mini
+          options:
+            temperature : 0.2
+minio:
+  url: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket: biasguard-resumes
