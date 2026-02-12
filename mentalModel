@@ -1,0 +1,10 @@
+Client
+  |
+  |-- Upload Resume
+  v
+Spring Boot API
+  |-- Store file --> MinIO (S3)
+  |-- Extract text --> Apache Tika
+  |-- Save text --> Postgres
+  |-- Generate embeddings --> pgvector
+  |-- Compare bias --> Spring AI
